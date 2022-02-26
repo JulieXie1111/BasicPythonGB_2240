@@ -6,31 +6,33 @@ print("Enter duration or 'q' to exit the program.")
 duration = ''
 while duration != 'q':
     duration = (input("Enter time in seconds: "))
-    try:
-        duration = int(duration)
-    except ValueError:
-        continue  # print("You can't use letters!")
+    if duration == 'q':
+        break
     else:
-        hours = duration // 3600
-        remainder_secs = duration % 3600
-
-        minutes = remainder_secs // 60
-        remainder_secs = remainder_secs % 60
-        secs = remainder_secs
-
-        days = 0
-        while hours >= 24:
-            days += 1
-            hours = hours - 24
-        # Ветвление для вывода.
-        if not days:
-            if hours:
-                print(f" {hours:02} h - {minutes:02} m - {secs:02} s")
-            else:
-                if minutes:
-                    print(f"{minutes:02} m - {secs:02} s")
-                else:
-                    if secs:
-                        print(f"{secs:02} s")
+        try:
+            duration = int(duration)
+        except ValueError:
+            print("You can't use letters!")
         else:
-            print(f"{days:02} d - {hours:02} h - {minutes:02} m - {secs:02} s")
+            hours = duration // 3600
+            remainder_secs = duration % 3600
+            minutes = remainder_secs // 60
+            remainder_secs = remainder_secs % 60
+            secs = remainder_secs
+
+            days = 0
+            while hours >= 24:
+                days += 1
+                hours = hours - 24
+            # Ветвление для вывода.
+            if not days:
+                if hours:
+                    print(f" {hours:02} h - {minutes:02} m - {secs:02} s")
+                else:
+                    if minutes:
+                        print(f"{minutes:02} m - {secs:02} s")
+                    else:
+                        if secs:
+                            print(f"{secs:02} s")
+            else:
+                print(f"{days:02} d - {hours:02} h - {minutes:02} m - {secs:02} s")
