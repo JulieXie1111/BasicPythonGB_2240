@@ -13,8 +13,11 @@ for number in my_list:
     if item_sum % 7 == 0:
         nums_seven.append(number)
 
-nums_seven_sum = sum(nums_seven)
+nums_seven_sum = 0
+for number in nums_seven:
+    nums_seven_sum += number
 print(nums_seven_sum)
+
 
 # К каждому элементу списка добавить 17 и заново вычислить сумму тех чисел из этого списка, сумма цифр которых делится
 # нацело на 7.
@@ -32,6 +35,8 @@ for number in added_seventeen:
     if item_sum % 7 == 0:
         nums_seventeen_seven.append(number)
 
-nums_seventeen_seven_sum = sum(nums_seventeen_seven)
+nums_seventeen_seven_sum = 0
+for number in nums_seventeen_seven:
+    nums_seventeen_seven_sum += number
 print(nums_seventeen_seven_sum)
 # print(sum(nums_seventeen_seven))
