@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc21d38-a565-4d16-a554-c62d65e16955" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/l2_task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/l2_task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/l2_task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/l2_task_5.py" afterDir="false" />
-    </list>
+    <list default="true" id="1dc21d38-a565-4d16-a554-c62d65e16955" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,6 +151,7 @@
       <workItem from="1646277087293" duration="10960000" />
       <workItem from="1646303133927" duration="7870000" />
       <workItem from="1646317980813" duration="299000" />
+      <workItem from="1646362076597" duration="104000" />
     </task>
     <servers />
   </component>
@@ -168,6 +164,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
