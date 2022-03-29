@@ -25,6 +25,6 @@ while idx < len(some_list):
         idx += 2
     idx += 1
 
-print(some_list)
+print(' '.join(some_list))
 
 # новый список не создавался.
