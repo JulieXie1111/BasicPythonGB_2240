@@ -3,20 +3,15 @@
 # в формате «Имя Фамилия» и возвращающую словарь, в котором ключи — первые буквы фамилий, а значения — словари,
 # реализованные по схеме предыдущего задания и содержащие записи, в которых фамилия начинается с соответствующей буквы.
 
-full_name = ['Adam Jensen', 'Lucifer Morningstar', 'Bruce Wayne', 'Kate Kane']
-l_names_letters = []
-f_names_letters = []
-res_dict = {}
-for name in full_name:
-    f_names_letters.append(name[0])
-    for f in name.split(' ')[1]:
-        if f.isupper():
-            l_names_letters.append(f)
+def thesaurus_adv(*names_surnames):
+    out_dict = {}
+    for name_surname in names_surnames:
+        name, surname = name_surname.split()
+        out_dict.setdefault(surname[0], {})
+        out_dict[surname[0]].setdefault(name[0], [])
+        out_dict[surname[0]][name[0]].append(name_surname)
 
-for i in l_names_letters:
-    res_dict[i] = {x: y for x in f_names_letters for y in full_name if x == y[0]}
+    return out_dict
 
-print(l_names_letters)
-print(f_names_letters)
 
-print(res_dict)
+print(thesaurus_adv("Rachel Green", 'Monica Geller', 'Chandler Bing', 'Ross Geller', 'Joey Tribiani', 'Phoebe Buffay'))
