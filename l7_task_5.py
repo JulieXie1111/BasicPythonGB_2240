@@ -11,7 +11,6 @@
 import os
 import json
 
-
 given_folder = 'virt'
 files = []
 out_dict = {}
@@ -39,4 +38,4 @@ for file in files:
 print(out_dict)
 
 with open(os.path.basename(os.getcwd()) + 'summary.json', 'a', encoding='utf-8') as json_file:
-    json.dump(out_dict,json_file)
+    json.dump(out_dict, json_file)
