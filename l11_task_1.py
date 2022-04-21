@@ -5,8 +5,13 @@
 
 
 class Data:
-    def __init__(self, date):  # dd-mm-yyyy
-        self.date = date
+
+    def __init__(self):
+        self.date = None
+
+    def set_date(self, date):
+        if Data.validation(Data.str_to_int(date)):
+            self.date = date
 
     @classmethod
     def str_to_int(cls, date):
@@ -14,28 +19,29 @@ class Data:
 
         return res
 
-    # @staticmethod
-    # def date_val(data):
-    #     re_date = re.compile(r"^(0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-](19|20)\d\d$")
-    #     if re_date.match(data):
-    #         print('OK')
-    #     else:
-    #         print('not OK')
     @staticmethod
     def validation(res):
         day, month, year = res
         if 1 <= day <= 31:
             if 1 <= month <= 12:
                 if 9999 >= year >= 0:
-                    return f'All right'
+                    return True
                 else:
-                    return f'{year} - wrong year'
+                    return False
             else:
-                return f'{month} -  wrong month'
+                return False
         else:
-            return f'{day} - wrong day'
+            return False
 
 
 print(Data.validation(Data.str_to_int("20-02-2002")))
 print(Data.validation(Data.str_to_int("29-05-1996")))
 print(Data.validation(Data.str_to_int("45-02-2022")))
+print()
+today = Data()
+today.set_date("21-04-2022")
+print(today.date)
+print()
+a = Data()
+a.set_date("45-02-2022")
+print(a.date)
