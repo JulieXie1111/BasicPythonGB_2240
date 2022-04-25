@@ -18,8 +18,8 @@
 Подсказка: постарайтесь реализовать в проекте «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
 
-
 # ----------------------------------------------------------------------------------------------------------------------
+import re
 
 
 class WrongSerialNum(Exception):
@@ -107,6 +107,7 @@ class Warehouse:
 
 
 class OfficeEquipment:
+
     def __init__(self, model, color, serial_number):
         self.model = model
         self.color = color
@@ -126,12 +127,9 @@ class OfficeEquipment:
     def validate_serial(arg):
         """Проверка серийного номера"""
 
-        import re
         re_serial = re.compile(r'^[A-Z]{4}[0-9]{4}$')
         if re_serial.match(arg):
-            return True
-        else:
-            return False
+            return bool(re_serial.match(arg))
 
 
 class Printer(OfficeEquipment):
