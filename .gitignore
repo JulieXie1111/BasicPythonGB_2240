@@ -1,4 +1,10 @@
 
+.idea/
+.idea/.name
+.iml
+.xml
+=======
+
 
 .idea/.name
 .idea/misc.xml
@@ -17,3 +23,4 @@ virt
 .idea/.name
 .idea/BasicPythonGB_2240.iml
 *.xml
+
